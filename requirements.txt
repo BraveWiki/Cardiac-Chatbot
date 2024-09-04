@@ -1,0 +1,5 @@
+google.generativeai
+base64
+PIL
+Streamlit_chat
+Streamlit
