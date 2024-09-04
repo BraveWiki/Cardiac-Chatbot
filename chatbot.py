@@ -2,7 +2,6 @@ import streamlit as st
 import google.generativeai as genai
 from streamlit_chat import message
 from PIL import Image
-import base64
 
 # Configure API Key
 GOOGLE_API_KEY = "AIzaSyCOEqA_IZlpWCHhMOGaDJ3iJjl5cRmzKgQ"
