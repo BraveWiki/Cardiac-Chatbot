@@ -1,5 +1,4 @@
 google.generativeai
 Streamlit_chat
 Streamlit
-csv
 pandas
