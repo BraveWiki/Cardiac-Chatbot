@@ -33,7 +33,7 @@ if submit:
     # Check if the input is not empty
     if symptoms:
         # Call the generative model to get a response
-        response = model.generate(symptoms)
+        response = model.generate_content(symptoms)
 
         # Display the model's response
         st.subheader("Consultation Response:")
