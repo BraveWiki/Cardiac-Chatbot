@@ -2,3 +2,5 @@ google.generativeai
 Streamlit_chat
 Streamlit
 datetime
+csv
+pandas
