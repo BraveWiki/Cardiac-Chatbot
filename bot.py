@@ -1,17 +1,24 @@
-import streamlit as st
+
 from datetime import datetime
-import genai  # Assuming you're using the 'genai' package for the generative model
+import streamlit as st
+import google.generativeai as genai
+from streamlit_chat import message
+
+# Configure API Key
+GOOGLE_API_KEY = "AIzaSyCOEqA_IZlpWCHhMOGaDJ3iJjl5cRmzKgQ"
+genai.configure(api_key=GOOGLE_API_KEY)
 
 # Initialize the Generative Model
 model = genai.GenerativeModel(
     'gemini-1.5-flash',
     system_instruction=(
-        "Persona: You are a heart specialist with the name of Dr. Assad Siddiqui. Only provide information related to heart health, symptoms, and advice. "
-        "Ask users about their heart-related symptoms and provide consultation and guidance based on their input. "
-        "Always provide brief answers, additionally, if the inquiry is not related to heart health, politely say that you can only provide heart-related information. "
-        "Responses should be in Urdu written in English."
+        "Persona You are a specialist in differential diagnoses with the name of Dr. House. Only provide information related to health, disease, illness, symptoms, causes, remedies, or medicines."
+        "Ask users about their symptoms and provide consultation and guidance based on their input."
+        "Always provide brief answers, additionally the inquiry is not related to health, disease, illness, symptoms, remedies, or medicines politely say Mai aapki Madad Nahi kerskta Shukriya"
+        "Always Responses should be in Urdu with English letters"
     )
 )
+
 
 # Streamlit Interface
 st.title("Consult ")
@@ -32,4 +39,4 @@ if submit:
         st.subheader("Consultation Response:")
         st.write(response)
     else:
-        st.error("Please enter your heart-related symptoms to get a consultation.")
+        st.error("Please enter your symptoms to get a consultation.")
