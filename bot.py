@@ -6,7 +6,7 @@ import csv
 from datetime import datetime
 
 # Configure API Key
-GOOGLE_API_KEY = "AIzaSyCOEqA_IZlpWCHhMOGaDJ3iJjl5cRmzKgQ"
+GOOGLE_API_KEY = ""
 genai.configure(api_key=GOOGLE_API_KEY)
 
 # Initialize the Generative Model
